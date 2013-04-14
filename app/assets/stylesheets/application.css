@@ -50,6 +50,10 @@ body{
 	padding: 15px 2px;
 	border-radius: 0 25px; 1px 15px;
 }
+.brand:hover{
+	background: none;
+	color:green
+}
 .cat{
 	background: #eee;
 	height:35px;
@@ -135,3 +139,18 @@ text-decoration: none;
 	
 	
 }
+.part{
+	margin: 0;
+	list-style:none;
+	
+	height: 100px;	
+}
+.part li{
+	float :left;
+	margin: 10px 5px;
+	
+	}
+	.part li img{
+		width:97px;
+		
+	}

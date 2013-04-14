@@ -16,6 +16,7 @@
 
 $(document).ready(function(){
 
+$(#tabs).tabs();
 
 $(".page-header").hover(function(){
 $(this).toggleClass("hover");
