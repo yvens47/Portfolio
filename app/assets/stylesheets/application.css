@@ -13,7 +13,7 @@
  */
 
 body{
-	padding: 76px 5px 10px 5px;
+	padding: 80px 5px 10px 5px;
 	background: #FAF7F7;
 }
 .page-header h3{
@@ -45,6 +45,10 @@ body{
 }
 .wide{
 	background:#DDDDD
+}.brand span{
+	background: #ED8915;
+	padding: 15px 2px;
+	border-radius: 0 25px; 1px 15px;
 }
 .cat{
 	background: #eee;
@@ -117,8 +121,11 @@ text-decoration: none;
 	
 }
 .navbar-inner{
-	height:65px;
+	
 	padding-top:10px;
+}
+.navbar-inner .container{
+	margin-top:10px;
 }
 .social p{	padding:5px;
 }

@@ -12,7 +12,7 @@
 			<div class="navbar-inner">
 				<div class="container">
 					<ul class="nav">
-						<a class="brand">Portfolio</a>
+						<a class="brand"><span>Get</span>Result</a>
 						<li>
 							<%= link_to "Browse",  posts_path%>
 						</li>
@@ -21,10 +21,7 @@
 					<ul class="nav pull-right">
 						<% if user_signed_in? %>
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"> 
-								<%="hi "+current_user.first_name %>
-								
-								<b class="caret"></b> </a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"> <%= "hi "+current_user.first_name %> <b class="caret"></b> </a>
 							<ul class="dropdown-menu">
 								<li>
 									<a href="#">Profile</a>
@@ -51,14 +48,9 @@
 			</div>
 
 		</div>
-		<div class="ribbon ">
-			<div class="search">
-				
-			</div>
-
-		</div>
 
 		<!-- main content area-->
+
 		<div class="container">
 			<div class="span7 pull-left">
 
@@ -90,24 +82,28 @@
 			<div class="span4 pull-right">
 
 				<div class="well">
+					<%if user_signed_in? %>
 					<div class="frm">
 						<h2>Login</h2>
-						<%= form_for("user", :url=>user_session_path,:class=>"form-vertical") do |f|%>
-						<div>
+						Ads Area......
+						<div class="sign">
+							<%= link_to "Sign in", new_user_session_path, :class =>'btn btn-success' %>
 
-							<%= f.text_field :email, :placeholder=>"Email", :autofocus => true%>
-						</div>
-						<div>
-							<%= f.password_field :password, :placeholder =>"password"%>
 						</div>
 
-						<div>
-							<%= f.submit "Sign in", :class=>"btn"%>
-							<%= link_to "Forgot Your Password", new_password_path('user')%>
-						</div>
-
-						<%end%>
 					</div>
+					<%else%>
+					<div class="frm">
+						<h2>Register</h2>
+						Become A member to get access to exclusive Content
+						<div class="sign">
+							<%= link_to "Sign in", new_user_session_path, :class =>'btn btn-success' %>
+
+						</div>
+
+					</div>
+
+					<%end%>
 				</div>
 				<div class="span4 pull-right">
 					<div class="cat">
@@ -140,15 +136,17 @@
 		</div>
 		<div class="footer">
 			<div class="container">
-				<p>sdgjdsgjdgskjdgskjdgsnngklsganklgbasng</p>
+				<p>
+					sdgjdsgjdgskjdgskjdgsnngklsganklgbasng
+				</p>
 				<div class="social">
-						<%= image_tag("facebook.png")%>
-					
-						<%= image_tag("twitter.png")%>	
-						<%= image_tag("rss.png")%>				
+					<%= image_tag("facebook.png")%>
 
+					<%= image_tag("twitter.png")%>
+					<%= image_tag("rss.png")%>
+
+				</div>
 			</div>
-		</div>
 
 	</body>
 </html>
