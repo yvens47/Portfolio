@@ -19,10 +19,8 @@
     <%= f.label :content %><br />
     <%= f.text_area :content %>
   </div>
-  <div>
-   <%= render :partial => 'tags/form',
-             :locals => {:form => post_form} %>
-      </div>
+   <h2>Tags</h2>
+ 
   <div class="actions">
     <%= f.submit %>
   </div>

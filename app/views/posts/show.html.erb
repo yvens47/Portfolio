@@ -12,8 +12,9 @@
  
 <p>
   <b>Tags:</b>
-  <%= join_tags(@post) %>
+  <%= @post.tags.map { |t| t.name }.join(", ") %>
 </p>
+ 
  
 <%=render @post.comments%>
 
