@@ -1,0 +1,130 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+body{
+	padding: 76px 5px 10px 5px;
+	background: #FAF7F7;
+}
+.page-header h3{
+	font-size:20px;
+	color:#5d7fa2;
+}
+.page-header span{
+	
+}
+
+.frm{
+	width:90%;
+	margin:3px auto;
+	border: solid 1px #EEEEEE;
+}
+.span3{
+	margin-top: 40px;
+	margin-right: 5px;
+}
+.ribbon{
+	width: 940px;
+	position:relative;
+	z-index:1;
+	
+	height: 90px;
+	margin:0 auto;
+	background: url("ribbons.png");
+	border-bottom: dashed 1px green;
+}
+.wide{
+	background:#DDDDD
+}
+.cat{
+	background: #eee;
+	height:35px;
+	text-align:left;
+	border-radius:15px 15px 0 0px;
+	padding: 5px 3px 3px 20px;
+	border: solid 1px #add;
+	font-size: 20px;
+	font-weight: bold;
+	
+}
+.catinner{
+	background: #adef;
+	height:auto;
+	
+	text-align:left;
+	border-radius:0px 0px 15px 15px;
+	padding: 5px 3px 10px 20px;
+	border: solid 1px #add;
+	font-size: 20px;
+	font-weight: bold;
+	
+}
+.catinner .navlist{
+	
+margin-left: 0;
+padding-left: 0;
+list-style: none;
+}
+.admin{
+  display:none;
+}
+.page-header.hover .admin{
+  display:inline;
+}
+.navlist li
+{
+padding-left: 10px;
+background-image: url(bullet1.png);
+text-decoration: none;
+
+}
+.navlist li a{
+	text-decoration: none;
+}
+.navlist ul li a:hover{
+	color: green;
+	background-color:none;
+	
+}
+.footer{
+	border-top: 1px #5d7fa2 solid;
+	width: 940px;
+	margin:10px auto;
+	background: #D9D9D9;
+	height:100px;
+	
+	
+}
+.footer .container p{
+	padding:  10px;
+}
+.social  {
+	padding:0;
+	margin-right:3px;
+	list-style: none;
+	float :right;
+
+	
+}
+.navbar-inner{
+	height:65px;
+	padding-top:10px;
+}
+.social p{	padding:5px;
+}
+.social img {
+	margin-top:0px ;
+	margin-right:10px;
+	
+	
+}
