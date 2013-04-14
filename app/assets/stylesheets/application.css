@@ -123,6 +123,9 @@ text-decoration: none;
 	float :right;
 
 	
+	
+}.k{
+	visibility:hidden;
 }
 .navbar-inner{
 	
