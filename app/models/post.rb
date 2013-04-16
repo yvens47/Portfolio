@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
   scope :published, where(published: true)
-  attr_accessible :content, :name, :title, :user_id, :tags_attributes
+  attr_accessible :content, :name, :title, :user_id, :tags_attributes,:photo
   
   validates :content,  :presence =>true, :length=>{:minimum =>50}
   validates :title, :presence => true,
@@ -13,6 +13,8 @@ class Post < ActiveRecord::Base
                    
     accepts_nested_attributes_for :tags , :allow_destroy =>true,
     :reject_if =>proc{ |attrs| attrs.all? {|k, v|v.blank?}}
+    
+    #has_attached_file :photo
  
                     
 end

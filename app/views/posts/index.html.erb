@@ -3,16 +3,16 @@
 <% @posts.each do |post| %>
 <div class ="page-header">
 	<%= div_for post do %>
-
-	<h3> <%= post.title %></h3>
-	<%= post.comments.count %>
-	<hr/>
+	<h3> <%= post.title %>
+	
+	</h3>
+	
 	<p>
 		<%= post.content %><br/>
 		<!--<%=post.user.full_name%></b>-->
 	</p>
 	<div class="meta">
-		<%= link_to time_ago_in_words(post.created_at) +" ago", post %>
+		<strong>Added</strong> <%= link_to time_ago_in_words(post.created_at) +" ago", post %>
 
 		<span class="admin"><%= link_to 'Edit', edit_post_path(post) %></span>
 		<span class="admin"><%= link_to 'Destroy', post, method: :delete, remote: true %></span>

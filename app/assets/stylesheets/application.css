@@ -12,10 +12,16 @@
  *= require_tree .
  */
 
-body{
-	padding: 80px 5px 10px 5px;
-	background: #FAF7F7;
+.container h1 span{
+	color: purple;
+	font-style: normal;
+	
+	
 }
+.container h1 .b{
+	color:green;
+}
+
 .page-header h3{
 	font-size:20px;
 	color:#5d7fa2;
@@ -55,7 +61,7 @@ body{
 	color:green
 }
 .cat{
-	background: #eee;
+	background: #ED8915;
 	height:35px;
 	text-align:left;
 	border-radius:15px 15px 0 0px;
@@ -92,10 +98,17 @@ list-style: none;
 .navlist li
 {
 padding-left: 10px;
-background-image: url(bullet1.png);
+background-image: url("bullet1.png");
 text-decoration: none;
 
 }
+.post h3{
+	
+	margin-bottom:-3px;
+	
+	
+}
+
 .navlist li a{
 	text-decoration: none;
 }

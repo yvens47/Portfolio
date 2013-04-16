@@ -1,8 +1,9 @@
 class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
+  before_filter :authenticate_user!, :except =>[:show,:index]
   def index
-    @posts = Post.published.paginate(:page => params[:page], :per_page =>1)
+    @posts = Post.published.paginate(:page => params[:page], :per_page =>3)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -41,6 +42,7 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(params[:post])
+    
      @post.user_id = current_user.id
 
     respond_to do |format|

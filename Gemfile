@@ -9,6 +9,7 @@ group :production do
 gem 'devise'
 gem 'will_paginate', '~> 3.0'
 gem 'will_paginate-bootstrap'
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 end
 
 gem 'devise'
@@ -17,6 +18,7 @@ gem 'will_paginate-bootstrap'
 
 group :test, :development do
  gem 'sqlite3'
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'devise'
 gem 'will_paginate', '~> 3.0'
 gem 'will_paginate-bootstrap'

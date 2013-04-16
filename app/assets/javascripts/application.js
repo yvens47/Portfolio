@@ -15,8 +15,12 @@
 //= require_tree .
 
 $(document).ready(function(){
-
-$(#tabs).tabs();
+$(".expand").focus(function(){
+	$(this).css("height","400px")
+});
+$(".expand").focusout(function(){
+	$(this).css("height", "60px")
+});
 
 $(".page-header").hover(function(){
 $(this).toggleClass("hover");
