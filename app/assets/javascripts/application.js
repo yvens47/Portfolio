@@ -12,17 +12,38 @@
 //
 //= require jquery
 //= require jquery_ujs
+
 //= require_tree .
+function showAlert(){
+  $("#myAlert").addClass("in")
+}
 
-$(document).ready(function(){
-$(".expand").focus(function(){
-	$(this).css("height","400px")
+$(document).ready(function() {
+	$('#myModal').modal(options);
+	$(".search-query").focus(function(){
+		$(this).css("width", "250px")
+		
+	})
+	$(".search-query").focusout(function(){
+		$(this).css("width", "200px")
+	})
+$("#close").click(function(){
+	$("#herobox").hide(2000);
+	
+	$("$herobox").css("display", "none");
+	
 });
-$(".expand").focusout(function(){
-	$(this).css("height", "60px")
-});
+	
+	
 
-$(".page-header").hover(function(){
-$(this).toggleClass("hover");
-})
+	$(".expand").focus(function() {
+		$(this).css("height", "400px")
+	});
+	$(".expand").focusout(function() {
+		$(this).css("height", "60px")
+	});
+
+	$(".page-header").hover(function() {
+		$(this).toggleClass("hover");
+	})
 })

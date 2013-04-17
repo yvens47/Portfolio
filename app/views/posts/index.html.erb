@@ -2,9 +2,9 @@
 
 <% @posts.each do |post| %>
 <div class ="page-header">
-	<%= div_for post do %>
-	<h3> <%= post.title %>
 	
+	<h3> <%= post.title %>
+	<%= image_tag  post.avatar_url.to_s%>
 	</h3>
 	
 	<p>
@@ -14,11 +14,11 @@
 	<div class="meta">
 		<strong>Added</strong> <%= link_to time_ago_in_words(post.created_at) +" ago", post %>
 
-		<span class="admin"><%= link_to 'Edit', edit_post_path(post) %></span>
+		<span class="admin"><%= link_to 'Edit', edit_post_path(post) %> </span>
 		<span class="admin"><%= link_to 'Destroy', post, method: :delete, remote: true %></span>
 	</div>
 
-	<%end%>
+
 </div>
 <% end %>
 <%= will_paginate @posts %>

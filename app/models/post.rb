@@ -1,6 +1,7 @@
 class Post < ActiveRecord::Base
   scope :published, where(published: true)
-  attr_accessible :content, :name, :title, :user_id, :tags_attributes,:photo
+  attr_accessible :content, :name, :title, :user_id, :tags_attributes,:photo,:avatar
+   mount_uploader :avatar, AvatarUploader
   
   validates :content,  :presence =>true, :length=>{:minimum =>50}
   validates :title, :presence => true,

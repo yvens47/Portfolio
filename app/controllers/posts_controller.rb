@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   before_filter :authenticate_user!, :except =>[:show,:index]
   def index
-    @posts = Post.published.paginate(:page => params[:page], :per_page =>3)
+    @posts = Post.published.paginate(:page => params[:page], :per_page =>2)
 
     respond_to do |format|
       format.html # index.html.erb

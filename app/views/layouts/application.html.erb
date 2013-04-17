@@ -3,12 +3,12 @@
 	<head>
 		<title>Portfolio</title>
 		<%= stylesheet_link_tag    "application", :media => "all" %>
-		<%= javascript_include_tag "application" %>
+		
 		<%= csrf_meta_tags %>
 	</head>
 	<body>
 
-		<div class="navbar navbar-fixed-top">
+		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container">
 					<ul class="nav">
@@ -16,6 +16,10 @@
 						<li>
 							<%= link_to "Browse",  posts_path%>
 						</li>
+
+						<form class="hey navbar-search pull-right">
+							<input type="text" class="search-query" placeholder="Search">
+						</form>
 
 					</ul>
 					<ul class="nav pull-right">
@@ -52,6 +56,33 @@
 		<!-- main content area-->
 
 		<div class="container">
+			<% unless params[:controller] != 'home' && params[:action] == 'index' %>
+			<div id="herobox">
+			<div id="hero-content">
+			
+        <div id="close"><a title="click to minimize">X</a></div>
+
+        <div id="blurb">
+            <span id="site-name">Android Enthusiasts Stack Exchange</span> is a question and answer site for 
+            enthusiasts and power users of the Android operating system. It's 100% free, no registration required.
+            <br><br>
+            <a href="/about" id="tell-me-more" class="btn ">Tell me more</a>
+        </div>
+        <div id="desc">
+            <b>Here's how it works:</b>
+            <ol id="hiw">
+                <li id="q">Anybody can Post an article
+                </li>
+                <li id="an">Share with the world
+                </li>
+                <li id="b">The best answers are voted up and rise to the top
+                </li>
+            </ol>
+        </div>
+        </div>
+       </div>
+    
+			<%end%>
 			<div class="span7 pull-left">
 
 				<% if flash[:error] -%>
@@ -172,6 +203,8 @@
 
 				</div>
 			</div>
+			
+<%= javascript_include_tag "application" %>
 
 	</body>
 </html>
