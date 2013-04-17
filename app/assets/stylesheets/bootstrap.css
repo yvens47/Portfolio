@@ -99,7 +99,7 @@ sub {
 }
 
 img {
-  width: auto\9;
+  width: auto;
   height: auto;
   max-width: 100%;
   vertical-align: middle;
@@ -811,8 +811,8 @@ h4 small {
 }
 
 .page-header {
-  padding-bottom: 9px;
-  margin: 3px 0 5px;
+  padding-bottom: 5px;
+  margin: 3px 0 3px;
   border-bottom: 1px solid #eeeee;
 }
 

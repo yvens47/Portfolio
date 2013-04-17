@@ -2,13 +2,16 @@
 
 <% @posts.each do |post| %>
 <div class ="page-header">
+	<div id="wrap">
 	
 	<h3> <%= post.title %>
-	<%= image_tag  post.avatar_url.to_s%>
+	
 	</h3>
 	
 	<p>
-		<%= post.content %><br/>
+		
+		<span class="img"><%= image_tag  post.avatar_url.to_s, :class=>"post_image"%></span>
+		<%= truncate(post.content ,:length=>75)%>
 		<!--<%=post.user.full_name%></b>-->
 	</p>
 	<div class="meta">
@@ -17,7 +20,7 @@
 		<span class="admin"><%= link_to 'Edit', edit_post_path(post) %> </span>
 		<span class="admin"><%= link_to 'Destroy', post, method: :delete, remote: true %></span>
 	</div>
-
+</div>
 
 </div>
 <% end %>

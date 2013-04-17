@@ -262,6 +262,28 @@ text-decoration: none;
 	margin: 10px 5px;
 	
 	}
+	#wrap span{
+		float:left;
+		height: 100px;
+		width:130px;
+		padding-bottom:10px;
+		border: #EEEEEE 2px solid;
+		
+		
+		
+		
+	}
+	
+	#wrap{
+		
+		overflow: hidden;
+		padding:2px 2px 3px 2px;
+		border-top:#EEEEEE 1px solid;
+		zoom: 1;
+	}
+	.post_image{
+		
+	}
 	.part li img{
 		width:97px;
 		
