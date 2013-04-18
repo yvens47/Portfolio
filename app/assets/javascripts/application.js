@@ -14,19 +14,16 @@
 //= require jquery_ujs
 
 //= require_tree .
-function showAlert(){
-  $("#myAlert").addClass("in")
-}
+
 
 $(document).ready(function() {
-	$('#myModal').modal(options);
 	$(".search-query").focus(function(){
 		$(this).css("width", "250px")
 		
 	})
 	$(".search-query").focusout(function(){
 		$(this).css("width", "200px")
-	})
+	});
 $("#close").click(function(){
 	$("#herobox").hide(2000);
 	

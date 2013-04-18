@@ -1,5 +1,6 @@
 <h1>All posts</h1>
 
+
 <% @posts.each do |post| %>
 <div class ="page-header">
 	<div id="wrap">
@@ -10,8 +11,7 @@
 	
 	<p>
 		
-		<span class="img"><%= image_tag  post.avatar_url.to_s, :class=>"post_image"%></span>
-		<%= truncate(post.content ,:length=>75)%>
+		<span class="img"><%= image_tag  post.avatar_url.to_s, :class=>"post_image"%></span><%= raw post.content %>
 		<!--<%=post.user.full_name%></b>-->
 	</p>
 	<div class="meta">

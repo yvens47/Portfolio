@@ -1,7 +1,13 @@
 Portfolio::Application.routes.draw do
 resources :posts do
-  resources :comments
+   resources :comments
+  
+  collection do
+    match 'search' => 'post#search', :via => [:get, :post], :as => :search
+  end
 end
+ 
+
 
 
   devise_for :users

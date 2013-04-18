@@ -16,6 +16,13 @@ class Post < ActiveRecord::Base
     :reject_if =>proc{ |attrs| attrs.all? {|k, v|v.blank?}}
     
     #has_attached_file :photo
- 
+    searchable do
+       text :title, :content
+        text :comments do
+      comments.map { |comment| comment.body }
+    end
+    end
+    
+
                     
 end

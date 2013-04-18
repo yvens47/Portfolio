@@ -16,6 +16,9 @@
     <%= f.text_field :title , :placeholder =>"Post Title"%>
   </div>
   <div class="field">
+  	<%=f.select :category, ["Html","Css","javascript"],:prompt=>"select Category"%>
+  </div>
+  <div class="field">
     
     <%= f.text_area :content ,:placeholder => "Enter your content here",:class=>"expand"%>
     
